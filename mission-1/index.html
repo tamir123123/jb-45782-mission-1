@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Add Product</h2>
+    <form title="Add Product" id="productsForm" onsubmit="addProduct(event)">
+        <input type="text" id="productName" placeholder="Product Name" required><br>
+        <input type="number" id="productPrice" placeholder="Product Price" step="any" required><br>
+        <select name="productCategory" id="productCategory" placeholder="Product Category" required>
+             <option value="" disabled selected>Choose a category</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Meat">Meat</option>
+            <option value="Dairy">Dairy</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Basic">Basic</option>
+        </select><br>
+        <input type="url" id="productImage" placeholder="Product Image URL" required><br>
+        <button type="submit">Add Product</button>
+    </form>
+    <h2>My Cart</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="productsList">
+            
+        </tbody>
+    </table>
+</body>
+</html>
